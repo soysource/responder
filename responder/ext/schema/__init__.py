@@ -61,7 +61,6 @@ class Schema:
 
     @property
     def _apispec(self):
-
         info = {}
         if self.description is not None:
             info["description"] = self.description
@@ -124,7 +123,6 @@ class Schema:
 
     @property
     def docs(self):
-
         loader = jinja2.PrefixLoader(
             {
                 self.docs_theme: jinja2.PackageLoader(

@@ -69,11 +69,11 @@ class DebCommand(Command):
             rmtree(os.path.join(here, "deb_dist"))
         except FileNotFoundError:
             pass
-        self.status(u"Creating debian manifest…")
+        self.status("Creating debian manifest…")
         os.system(
             "python setup.py --command-packages=stdeb.command sdist_dsc -z artful --package3=pipenv --depends3=python3-virtualenv-clone"
         )
-        self.status(u"Building .deb…")
+        self.status("Building .deb…")
         os.chdir("deb_dist/pipenv-{0}".format(about["__version__"]))
         os.system("dpkg-buildpackage -rfakeroot -uc -us")
 
