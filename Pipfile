@@ -4,18 +4,19 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-responder = {editable = true, path = "."}
 pre-commit = "*"
+responder = {editable = true, path = "."}
 
 [dev-packages]
 pytest = "*"
 "flake8" = "*"
-black = "==20.8b1"
+black = "==23.*"
 twine = "*"
 flask = "*"
 sphinx = "*"
 marshmallow = "*"
 pytest-cov = "*"
+responder = {editable = true, path = "."}
 
 [pipenv]
 allow_prereleases = true

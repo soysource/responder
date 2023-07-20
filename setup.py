@@ -23,7 +23,7 @@ if sys.argv[-1] == "publish":
 
 required = [
     "starlette==0.13.*",
-    "uvicorn[standard]>=0.12.0,<0.13.3",
+    "uvicorn[standard]>=0.12.0,<0.15.0",
     "aiofiles",
     "pyyaml",
     "requests",
@@ -38,6 +38,8 @@ required = [
     "whitenoise",
     "docopt",
     "requests-toolbelt",
+    # Avoid AttributeError: module 'typesystem' has no attribute 'SchemaDefinitions'
+    "typesystem==0.2.5",
     "apistar",
     "itsdangerous",
 ]
